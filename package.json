@@ -1,0 +1,25 @@
+{
+  "name": "react-node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SirWilliamIII/react-w-node.git"
+  },
+  "author": "Will Carpenter <willcarpenteriii@gmail.com> (https://willcarpenter.site)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SirWilliamIII/react-w-node/issues"
+  },
+  "homepage": "https://github.com/SirWilliamIII/react-w-node#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "cors": "^2.8.4",
+    "express": "^4.16.1",
+    "nodemon": "^1.12.1"
+  }
+}
