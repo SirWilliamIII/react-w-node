@@ -4,25 +4,19 @@ const express    = require('express'),
       logger     = require('morgan')
 
 const app = express()
-const port = process.env.NODE || 5000
+const port = 5000
 
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 app.use(logger('dev'))
 app.use(cors())
-
-
-
-app.use(function (req, res) {
-	res.setHeader('Content-Type', 'text/json')
-	res.write('you posted:\n')
+app.use((req, res) => {
 	res.end(JSON.stringify(req.body, null, 2))
 })
 
-
-
+// GET '/'
 app.get('/', (req, res) => {
-	res.send({ hi: 'there' })
+	res.send({ message: 'hello there' })
 })
 
 app.listen(port, () => {
