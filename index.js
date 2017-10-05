@@ -4,12 +4,11 @@ const express    = require('express'),
       logger     = require('morgan')
 
 const app = express()
-const port = 5000
+const port = process.env.NODE || 5000
 
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 app.use(logger('dev'))
-app.use(cors())
 app.use((req, res) => {
 	res.end(JSON.stringify(req.body, null, 2))
 })
