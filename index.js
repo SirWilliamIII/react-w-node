@@ -1,10 +1,9 @@
 const express    = require('express'),
       bodyParser = require('body-parser'),
-      cors       = require('cors'),
       logger     = require('morgan')
 
 const app = express()
-const port = process.env.NODE || 5000
+const port = 'https://immense-bayou-52620.herokuapp.com/'
 
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
